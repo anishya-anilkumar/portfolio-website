@@ -318,6 +318,12 @@ section{
     border: rgb(53,53,53) 0.1rem solid;
     border-color: rgb(163,163,163);
     text-align: center;
+    transition: 0.4s ease;
+}
+
+.details-container:hover{
+    box-shadow: 0 0 40px grey;
+    transform: scale(1.05px);
 }
 
 .details-container2{
@@ -329,6 +335,12 @@ section{
     border: rgb(53,53,53) 0.1rem solid;
     border-color: rgb(163,163,163);
     text-align: center;
+    transition: 0.4s ease;
+}
+
+.details-container2:hover{
+    box-shadow: 0 0 40px grey;
+    transform: scale(1.05px);
 }
 
 .section-container{
