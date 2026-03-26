@@ -439,8 +439,21 @@ article .icon{
     align-items: center;
     gap: 1.5rem;
     flex-wrap: nowrap;
+    border: 0.5rem black;
 }
 
+#contacts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 80%;
+    border: 1px solid rgb(163,163,163);
+    border-radius: 2rem;
+    background: rgb(250,250,250);
+}
 .contact-info-container p{
     font-size: larger;
 }
