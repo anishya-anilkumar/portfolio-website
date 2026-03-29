@@ -9,7 +9,20 @@
 
 body{
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(60, 0, 120, 0.3),
+      rgba(120, 50, 200, 0.3),
+      rgba(180, 120, 255, 0.2)
+    ),
+    url("./assets/background.png");
+
+  background-size: contain;
+  background-position: center;
+
+  color: white;
 }
 
 html{
@@ -17,7 +30,11 @@ html{
 }
 
 p{
-    color: rgb(85,85,85);
+    color: #cbd5e1;
+}
+
+a{
+    color: white;
 }
 
 /*Transition*/
@@ -43,13 +60,13 @@ nav{
 }
 
 a{
-    color: black;
+    color:rgba(210, 7, 242, 0.684);
     text-decoration: none;
     text-decoration-color: white;
 }
 
 a:hover{
-    color: grey;
+    color: rgb(255, 255, 255);
     text-decoration: underline;
     text-underline-offset: 0.5rem;
     text-decoration-color: rgb(181,181,181);
@@ -85,7 +102,7 @@ a:hover{
 .hamburger-icon span{
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     display: block;
     transition: all 0.3s ease-in-out;
 }
@@ -106,9 +123,14 @@ a:hover{
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+}
+
+.menu-links ul{
+    background-color:rgba(120, 10, 139, 0.914);
+    border:rgba(56, 2, 65, 0.914) solid;
 }
 
 .menu-links li{
@@ -149,14 +171,14 @@ a:hover{
     height: 400px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    border: 5px solid rgb(45, 0, 52);
+    box-shadow: 0 0 25px rgb(98, 1, 113);
     transition: 0.4s ease;
 }
 
 .prf:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    box-shadow: 0 0 40px rgb(141, 46, 155);
 }
 
 /*sections*/
@@ -223,6 +245,7 @@ section{
 .icon{
     cursor: pointer;
     height: 2rem;
+    filter: invert(1);
 }
 
 /*button*/
@@ -234,35 +257,28 @@ section{
 
 .btn{
     font-weight: 600;
-    transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-}
-
-.btn-color-1,.btn-color-2{
-    border: rgb(53,53,53) 0.1rem solid;
-}
-
-.btn-color-1:hover,.btn-color-2:hover{
-    cursor: pointer;
-}
-
-.btn-color-1,.btn-color-2:hover{
-    background: rgb(53,53,53);
+    border: none;
+    background:rgba(202, 3, 232, 0.914); /* purple */
     color: white;
+    transition: all 0.3s ease;
 }
 
-.btn-color-1:hover{
-    background: rgb(0,0,0);
-}
-
+/* BOTH buttons same initially */
+.btn-color-1,
 .btn-color-2{
-    background: none;
+    background:rgba(202, 3, 232, 0.914);
+    color: rgba(40, 1, 47, 0.914);
+    transition: ease 0.4s;
 }
 
-.btn-color-2:hover{
-    border: rgb(255,255,255) 0.1rem solid;
+/* hover effect */
+.btn:hover{
+    background: rgba(223, 70, 247, 0.914); /* red */
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(18, 1, 21, 0.914);
 }
 
 .btn-container{
@@ -301,7 +317,7 @@ section{
 
 .about-pic:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 40px grey;
+    box-shadow: 0 0 40px rgba(240, 152, 255, 0.892);
 }
 
 .arrow{
@@ -313,16 +329,16 @@ section{
 .details-container{
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: rgba(51, 26, 56, 0.307);
+    border-color: rgba(33, 4, 38, 0.914);
     border-radius: 2rem;
-    border: rgb(53,53,53) 0.1rem solid;
-    border-color: rgb(163,163,163);
+    border: rgba(30, 3, 36, 0.914) 0.1rem solid;
     text-align: center;
     transition: 0.4s ease;
 }
 
 .details-container:hover{
-    box-shadow: 0 0 40px grey;
+    box-shadow: 0 0 40px rgba(167, 83, 182, 0.914);
     transform: scale(1.05px);
 }
 
@@ -330,17 +346,16 @@ section{
     padding: 1.5rem;
     flex: 1;
     height: 600px;
-    background: white;
+    background: rgba(51, 26, 56, 0.307);  /* dark like other cards */
     border-radius: 2rem;
-    border: rgb(53,53,53) 0.1rem solid;
-    border-color: rgb(163,163,163);
+    border: 1px solid rgba(30, 3, 36, 0.914);
     text-align: center;
     transition: 0.4s ease;
 }
 
 .details-container2:hover{
-    box-shadow: 0 0 40px grey;
-    transform: scale(1.05px);
+    box-shadow: 0 0 40px rgba(167, 83, 182, 0.914); /* purple glow */
+    transform: scale(1.05);
 }
 
 .section-container{
@@ -360,7 +375,7 @@ section{
 }
 
 .experience-sub-title{
-    color: rgb(85,85,85);
+    color: white;
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -398,8 +413,8 @@ article .icon{
 }
 
 .color-container{
-    border-color: rgb(163,163,163);
-    background: rgb(250,250,250);
+    background: rgba(51, 26, 56, 0.307);
+    border-color:  rgba(30, 3, 36, 0.914);
 }
 
 .project-img{
@@ -450,14 +465,29 @@ article .icon{
     padding: 2rem;
     margin: 2rem auto;
     width: 80%;
-    border: 1px solid rgb(163,163,163);
     border-radius: 2rem;
-    background: rgb(250,250,250);
-}
-.contact-info-container p{
-    font-size: larger;
+    background: rgba(51, 26, 56, 0.307); /* DARK */
+    border: 1px solid rgba(30, 3, 36, 0.914);
 }
 
+.contact-info-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(51, 26, 56, 0.307);
+    gap: 0.5rem;
+    margin: 1rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid rgba(30, 3, 36, 0.914);
+    border-radius: 1rem;
+    transition: 0.3s ease;
+}
+
+.contact-info-container:hover{
+    transform: translateY(-5px);
+    background-color: rgba(152, 26, 175, 0.914);
+    box-shadow: 0 0 15px rgba(167, 83, 182, 0.914);
+}
 .contact-icon{
     cursor: default;
 }
